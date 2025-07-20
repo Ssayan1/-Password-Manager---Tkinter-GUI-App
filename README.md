@@ -1,98 +1,81 @@
-# 🔐 Password Manager - Tkinter GUI App
+# 🔐 Password Manager (Advanced) – Tkinter + JSON
 
-A simple and secure **Password Manager** built using Python and Tkinter. This app helps you generate strong passwords and securely save your website credentials locally.
-
----
-
-## 📷 Preview
-
-<img src="https://img.icons8.com/color/96/lock.png" width="100"/>
-
-*Optional: Add a screenshot of your app here.*
+A secure, user-friendly **Password Manager** built with Python and Tkinter.  
+It allows you to generate strong passwords, save them locally in a JSON file, and retrieve them anytime using a built-in search function.
 
 ---
 
-## ✨ Features
+## 🧠 Key Features
 
-✅ Generate secure, random passwords  
-✅ Automatically copy generated password to clipboard  
-✅ Save website, email, and password to a `.txt` file  
-✅ Basic input validation (no empty fields)  
-✅ Clean and user-friendly GUI (built with Tkinter)
-
----
-
-## 🧪 Technologies Used
-
-- **Python 3**
-- **Tkinter** for GUI
-- **pyperclip** for clipboard functionality
+✅ Strong password generator (with letters, symbols, numbers)  
+✅ Auto-copy password to clipboard  
+✅ Saves website, email, and password data to `data.json`  
+✅ Search function to retrieve credentials by website name  
+✅ Input validation and error handling (e.g., missing fields, missing file)  
+✅ Clean GUI with logo image
 
 ---
 
-## 💻 How It Works
+## 🖼️ Screenshot
 
-1. Enter the **website name** and your **email or username**.
-2. Click **"Generate Password"** to create a strong, random password.
-3. Click **"Add"** to save the details to `data.txt`.
-4. Password is automatically copied to your clipboard.
+<img src="https://img.icons8.com/color/96/password.png" alt="Password Manager Icon" width="100" />
+
+*(You can add a real screenshot of your app here for a better preview.)*
 
 ---
 
-## 📦 Installation
-
-### 🔧 Requirements
-
-Make sure you have Python 3 installed.
-
-Install dependencies:
-
-## bash
-pip install -r requirements.txt
-
-##  contains:
-tk
-pyperclip
-
-## 🚀 Getting Started
-  git clone https://github.com/yourusername/password-manager.git
-cd password-manager
-python main.py
-
-## 🗂 Project Structure
+## 📁 Project Structure
 
 password-manager/
-│
-├── main.py             # Main application code
-├── logo.png            # App logo (used in the UI)
-├── data.txt            # Stores saved passwords (auto-created)
-├── requirements.txt    # Python dependencies
-└── README.md           # Project documentation
-
-## 🔐 Data Storage Format
-
-example.com | user@example.com | S@f3Pa$$w0rd
-
-## 📸 Logo
-You can use any 200x200 logo.png — like a lock or vault.
-Download one from Icons8 - Lock Icons
-Save it as logo.png in the same folder as main.py.
-
-## 🔧 Future Improvements
-
-🔐 Encrypt password file using cryptography
-
-🔎 Search stored credentials
-
-🗃 Use JSON or SQLite for structured storage
-
-🌐 Integrate with a browser extension
+├── main.py # Main application
+├── data.json # Stores all website/email/password info (auto-created)
+├── logo.png # Lock or vault image (used in UI)
+├── requirements.txt # Project dependencies
+└── README.md # This file
 
 
+---
 
- 
+## 📦 Dependencies
+
+- `tkinter` – GUI framework
+- `pyperclip` – To copy password to clipboard
+- `json` – To save/retrieve data (built-in)
+
+Install dependencies using:
 
 
+pip install -r requirements.txt
+- requirements.txt
+- tk
+- pyperclip
 
+##🚀 Getting Started
 
+- git clone https://github.com/yourusername/password-manager.git
+- cd password-manager
+- python main.py
 
+## 🔍 Search Function
+
+Enter the website name
+
+Click Search
+
+The app will retrieve and show the associated email and password
+
+If the website doesn't exist or file is missing, you’ll get a friendly message
+
+## 💾 Data Storage Format
+
+Data is saved in data.json like this:
+{
+  "github.com": {
+    "email": "your_email@example.com",
+    "password": "a1B!c2D@"
+  },
+  "gmail.com": {
+    "email": "myemail@gmail.com",
+    "password": "P@ssw0rd123"
+  }
+}
